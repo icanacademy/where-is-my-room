@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where Is My Room - ICAN Academy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Main Split Layout -->
+    <div class="split-layout">
+      <!-- Left Side: Widgets -->
+      <aside class="widgets-panel">
+        <!-- Large Clock Widget with Welcome -->
+        <div class="widget clock-widget">
+          <div class="welcome-section">
+            <h1 class="welcome-title">ICAN ACADEMY</h1>
+            <p class="welcome-subtitle">In ICAN, we can</p>
+          </div>
+          <div id="widgetTime" class="widget-time"></div>
+          <div id="widgetDate" class="widget-date"></div>
+          <div id="holidayLine" class="holiday-line">📅 Regular day</div>
+        </div>
+
+        <!-- Weather Widget -->
+        <div class="widget weather-widget">
+          <div class="weather-icon" id="weatherIcon">☀️</div>
+          <div class="weather-info">
+            <div class="weather-temp" id="weatherTemp">--°C</div>
+            <div class="weather-desc" id="weatherDesc">Loading weather...</div>
+            <div class="weather-location">Pasig, Philippines</div>
+          </div>
+          <div class="uv-info">
+            <div class="uv-label">UV Index</div>
+            <div class="uv-value" id="uvIndex">--</div>
+            <div class="uv-status" id="uvStatus">--</div>
+          </div>
+        </div>
+
+        <!-- Word of the Day Widget -->
+        <div class="widget word-widget">
+          <div class="widget-label">Word of the Day</div>
+          <div class="word-main" id="wordOfDay">Loading...</div>
+          <div class="word-pos" id="wordPos">noun</div>
+          <div class="word-meaning" id="wordMeaning">Loading definition...</div>
+        </div>
+
+        <!-- AI Mascot Widget -->
+        <div class="widget mascot-widget">
+          <div class="mascot-character">🤖</div>
+          <div class="speech-bubble">
+            <div id="mascotMessage">Find your classroom easily!</div>
+          </div>
+        </div>
+
+        <!-- Daily Quote Widget -->
+        <div class="widget quote-widget">
+          <div class="quote-icon">💭</div>
+          <div id="dailyQuote" class="quote-text">Loading inspiration...</div>
+        </div>
+
+        <!-- Photo/Video Gallery Widget -->
+        <div class="widget gallery-widget">
+          <div class="widget-label">📸 ICAN Academy Gallery</div>
+          <div class="gallery-container">
+            <img id="galleryImage" src="" alt="Gallery Photo" class="gallery-image" style="display: none;">
+            <video id="galleryVideo" class="gallery-image" muted autoplay style="display: none;"></video>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main: Room Finder Display -->
+      <main class="room-finder-panel">
+
+        <!-- ROOM FINDER PLACEHOLDER SECTION -->
+        <div class="room-finder-category">
+          <h2 class="category-title">🏫 CLASSROOM LOCATOR</h2>
+          <div class="room-finder-content">
+            <!-- This will be replaced with actual room finder UI -->
+            <div class="placeholder-container">
+              <div class="placeholder-icon">🗺️</div>
+              <h3 class="placeholder-title">Room Finder Coming Soon</h3>
+              <p class="placeholder-description">
+                This space will display classroom assignments and locations
+              </p>
+              <div class="placeholder-features">
+                <div class="feature-item">📍 Real-time room assignments</div>
+                <div class="feature-item">👨‍🏫 Teacher locations</div>
+                <div class="feature-item">📚 Class schedules</div>
+                <div class="feature-item">🗺️ Room maps</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="refresh-indicator">
+        <span id="lastUpdate">Last updated: --:--</span>
+        <span class="pulse"></span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Fullscreen Button -->
+  <button id="fullscreenBtn" class="fullscreen-btn" title="Enter Fullscreen (F)">⛶</button>
+
+  <!-- Display Toggle Button -->
+  <button id="displayToggleBtn" class="display-toggle-btn" title="Switch View (S)">
+    <span class="toggle-icon">📋</span>
+    <span class="toggle-text">Substitutes</span>
+  </button>
+
+  <!-- Lunch Break Floating Food Emojis -->
+  <div id="lunchEmojis" class="lunch-emojis-container"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
